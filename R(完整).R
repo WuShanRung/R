@@ -1,26 +1,26 @@
-#vector(¦V¶q)  -> ¤@ºû°}¦C
+#vector(å‘é‡)  -> ä¸€ç¶­é™£åˆ—
 v <- c(10, 5, 3.1, 6.4, 9.2, 21.7)
 v
-length(v) #¨Dvªºªø«×
-mode(v)   #¨Dvªº«¬ºA
+length(v) #æ±‚vçš„é•·åº¦
+mode(v)   #æ±‚vçš„åž‹æ…‹
 
-#NA (¯Ê­È= Null­È)
+#NA (ç¼ºå€¼= Nullå€¼)
 v <- c(10, 5, NA, 6.4, 9.2, 21.7)
 v
-v[2]        #¨Dvªº²Ä2­Ó¯Á¤Þ­È
+v[2]        #æ±‚vçš„ç¬¬2å€‹ç´¢å¼•å€¼
 
-v2 <- 1:10  #v2¬°1¦Ü10
-v2          #¨Dv2¬°¦h¤Ö
-v2[1]       #¨Dv2ªº²Ä1­Ó¯Á¤Þ­È
+v2 <- 1:10  #v2ç‚º1è‡³10
+v2          #æ±‚v2ç‚ºå¤šå°‘
+v2[1]       #æ±‚v2çš„ç¬¬1å€‹ç´¢å¼•å€¼
 
-#Matrix(¯x°})  -> ¤Gºû°}¦C (nrow¦C,ncol¦æ,byrow«ü¥H¦C±Æ§Ç)
+#Matrix(çŸ©é™£)  -> äºŒç¶­é™£åˆ— (nrowåˆ—,ncolè¡Œ,byrowæŒ‡ä»¥åˆ—æŽ’åº)
 x <- matrix(1:24, nrow=4, ncol=6, byrow=TRUE)
 x
-# ¥H¦æ±Æ§Ç -> byrow = FALSE 
+# ä»¥è¡ŒæŽ’åº -> byrow = FALSE 
 y <- matrix(1:24, nrow=4, ncol=6, byrow=FALSE)
 y
 
-#cbind()&rbind() #c«üª½Äæ,r«ü¾î¦C
+#cbind()&rbind() #cæŒ‡ç›´æ¬„,ræŒ‡æ©«åˆ—
 x1 <- c(1,2,3)
 x2 <- c(4,5,6)
 x3 <- c
@@ -30,53 +30,53 @@ xc
 xr <- rbind(x1, x2, x3)
 xr
 
-#Âà¸m(Trasposition)
+#è½‰ç½®(Trasposition)
 xc_t <- t(xc)
 xc_t
-#¨D¦³´X¦C?
+#æ±‚æœ‰å¹¾åˆ—?
 nrow(x)
-#¨D¦³´X¦æ?
+#æ±‚æœ‰å¹¾è¡Œ?
 ncol(x)
-#¨D¯S©w¦æ©Î¦Cªº­È
-x[1,]     #¨D²Ä1¦C
-x[,2]     #¨D²Ä2¦æ
-x[2,3]    #¨D²Ä2¦C²Ä3¦æ
+#æ±‚ç‰¹å®šè¡Œæˆ–åˆ—çš„å€¼
+x[1,]     #æ±‚ç¬¬1åˆ—
+x[,2]     #æ±‚ç¬¬2è¡Œ
+x[2,3]    #æ±‚ç¬¬2åˆ—ç¬¬3è¡Œ
 
 
-#eigenvalue & eigenvectors(¯S¼x¦V¶q)  ½u©Ê¥N¼Æ
+#eigenvalue & eigenvectors(ç‰¹å¾µå‘é‡)  ç·šæ€§ä»£æ•¸
 eigen(xc)
 
-#¯x°}¬Û­¼ %*%
+#çŸ©é™£ç›¸ä¹˜ %*%
 xc
 xr
 z <- xc %*% xr
 z
 
-#Array(°}¦C) -> ¦hºû«×°}¦C
+#Array(é™£åˆ—) -> å¤šç¶­åº¦é™£åˆ—
 x <- 1:24
-dim(x) <- c(4,6)    #4¦C6¦æªº°}¦C (2ºû)
+dim(x) <- c(4,6)    #4åˆ—6è¡Œçš„é™£åˆ— (2ç¶­)
 x
-#¥t¤@ºØ»yªk:(¸ò¤W¤è¤@¼Ë)
+#å¦ä¸€ç¨®èªžæ³•:(è·Ÿä¸Šæ–¹ä¸€æ¨£)
 x <- array(1:24, dim=c(4,6))
-#¨D²Ä2¦C²Ä4¦æªº­È
+#æ±‚ç¬¬2åˆ—ç¬¬4è¡Œçš„å€¼
 x[2,4]
 
-dim(x) <- c(3,4,2)  #3¦C4¦æªº°}¦C,¨Ã¤À¦¨2­¶Åã¥Ü!! (3ºû)
+dim(x) <- c(3,4,2)  #3åˆ—4è¡Œçš„é™£åˆ—,ä¸¦åˆ†æˆ2é é¡¯ç¤º!! (3ç¶­)
 x <- array(1:24, dim=c(3,4,2))
 x
-#¨D¯S©w¦æ©Î¦Cªº­È
+#æ±‚ç‰¹å®šè¡Œæˆ–åˆ—çš„å€¼
 x[2,3,1]
 x[3,1,2]
-# 0¥Nªí?????????????????????????????????????????????????
+# 0ä»£è¡¨??????
 x <- array(0, dim=c(4,6))
 x
 
-#Factor(¦]¤l) -> Ãþ§OÅÜ¼Æ
-x <- factor(c("¨k","¤k","¨k","¨k","¤k"))
+#Factor(å› å­) -> é¡žåˆ¥è®Šæ•¸
+x <- factor(c("ç”·","å¥³","ç”·","ç”·","å¥³"))
 x
-#µ²ªG·|¥X²{levels:¤k¨k(§ä¥X¤£¦Pªº­È¦³­þ¨Ç)
+#çµæžœæœƒå‡ºç¾levels:å¥³ç”·(æ‰¾å‡ºä¸åŒçš„å€¼æœ‰å“ªäº›)
 
-#datagrame(¸ê®Æ®Ø¬[)
+#datagrame(è³‡æ–™æ¡†æž¶)
 id <- c(1,2,3,4)
 age <- c(25,30,35,40)
 sex <- c("Male","Male","Female","Female")
@@ -84,60 +84,60 @@ pay <- c(30000,40000,45000,50000)
 
 x_dataframe <- data.frame(id,age,sex,pay)
 x_dataframe
-x_dataframe[3,2]  #¨D²Ä3¦C²Ä2Äæªº­È
-x_dataframe[4,]   #¨D²Ä4¦Cªº­È
-x_dataframe[2]    #¨D²Ä2Äæªº­È
-x_dataframe$age   #¨D©Ò¦³ageªº­È
+x_dataframe[3,2]  #æ±‚ç¬¬3åˆ—ç¬¬2æ¬„çš„å€¼
+x_dataframe[4,]   #æ±‚ç¬¬4åˆ—çš„å€¼
+x_dataframe[2]    #æ±‚ç¬¬2æ¬„çš„å€¼
+x_dataframe$age   #æ±‚æ‰€æœ‰ageçš„å€¼
 edit(x_dataframe) #???????????????
 x_dataframe
 
-#·í§ó§ï¸ê®Æ½s¿è¾¹¸Ìªº¼Æ­È«á,¦p¦ó§ó·s¸ê®Æ?
+#ç•¶æ›´æ”¹è³‡æ–™ç·¨è¼¯å™¨è£¡çš„æ•¸å€¼å¾Œ,å¦‚ä½•æ›´æ–°è³‡æ–™?
 x_dataframe <- edit(x_dataframe)
 x_dataframe
 
-#list¦Cªí
+#liståˆ—è¡¨
 id <- c(1,2,3)
 sex <- c("Male","Male","Female")
 pay <- c(30000,40000,45000)
 y_dataframe <- data.frame(id,sex,pay)
-gender <- factor(c("¨k","¨k","¤k"))
+gender <- factor(c("ç”·","ç”·","å¥³"))
 Paul.Family <- list(name="Paul", wife="Iris", no.kids=3, kids.age=c(25, 28, 30), gender, y_dataframe)
 Paul.Family
 
-#¨ú¤p«Ä¦~ÄÖ(kids.age)
+#å–å°å­©å¹´é½¡(kids.age)
 Paul.Family$kids.age
 Paul.Family[4]
-Paul.Family[[4]] #¥h°£±¼Äæ¦ì¦WºÙ!
+Paul.Family[[4]] #åŽ»é™¤æŽ‰æ¬„ä½åç¨±!
 
 Paul.Family$kids.age[2]
 Paul.Family[[4]][2]
-#¿ù»~½d¨Ò: Paul.Family[4][2]
+#éŒ¯èª¤ç¯„ä¾‹: Paul.Family[4][2]
 
-#²Ä2³¹ ¸ê®ÆªºÅª¨ú»P¼g¤J
+#ç¬¬2ç«  è³‡æ–™çš„è®€å–èˆ‡å¯«å…¥
 getwd()
-setwd("c:/")  #§ó§ï¸ô®|¨ìC¼Ñ¥Ø¿ý¤U
+setwd("c:/")  #æ›´æ”¹è·¯å¾‘åˆ°Cæ§½ç›®éŒ„ä¸‹
 getwd()
-#¤â°Ê±Nx.csv,x1.. ÀÉ¦W¦³xªºÄÒ©ñ¨ìC¼Ñ!
+#æ‰‹å‹•å°‡x.csv,x1.. æª”åæœ‰xçš„é»¨æ”¾åˆ°Cæ§½!
 
-#Åª¨úÀÉ®× (¥²¶·¥ý¤â°Ê©ñC¼Ñ!!)
+#è®€å–æª”æ¡ˆ (å¿…é ˆå…ˆæ‰‹å‹•æ”¾Cæ§½!!)
 x <- read.table("X.csv", sep=",", header=TRUE)
 x
 str(x)
-#¨ú¯S©wÄæ¦ìªº­È
+#å–ç‰¹å®šæ¬„ä½çš„å€¼
 x$age
 x[1, 2]
 
 
-#¿ù»~ªº½d¨Ò: header=FALSE
+#éŒ¯èª¤çš„ç¯„ä¾‹: header=FALSE
 x <- read.table("X.csv", sep=",", header=FALSE)
 x
 str(x)
-#read.csv()¨ç¼Æ -> csv¥Nªísep=","
+#read.csv()å‡½æ•¸ -> csvä»£è¡¨sep=","
 x <- read.csv("X.csv",header = TRUE)
 x
 
-#read.table()   -> ±NX.csvÀÉÂà¦¨X.txtÀÉ®× 
-x <- read.table("X.txt",sep=" ",header=TRUE)#¿ùªº
+#read.table()   -> å°‡X.csvæª”è½‰æˆX.txtæª”æ¡ˆ 
+x <- read.table("X.txt",sep=" ",header=TRUE)#éŒ¯çš„
 x
 
 x <- read.table("X.txt",sep="\t",header=TRUE)
@@ -145,10 +145,10 @@ x
 
 x <- read.table("X.txt",header=TRUE)
 x
-#scan()¨ç¼Æ -> ±µ¨üÁä½L¿é¤Jªº¸ê®Æ(ª½±µ¥Îkeyªº)
+#scan()å‡½æ•¸ -> æŽ¥å—éµç›¤è¼¸å…¥çš„è³‡æ–™(ç›´æŽ¥ç”¨keyçš„)
 x <-scan("")
 x
-#¤]¥i«ü©w¿é¤J¸ê®Æªº«¬ºA #my«á­±ªºµ¥¸¹¤]¥i¥Î<-¨ú¥N
+#ä¹Ÿå¯æŒ‡å®šè¼¸å…¥è³‡æ–™çš„åž‹æ…‹ #myå¾Œé¢çš„ç­‰è™Ÿä¹Ÿå¯ç”¨<-å–ä»£
 my = scan(file ="", what = list(name = "", pay = integer(0), sex =""))
 my
 
@@ -158,7 +158,7 @@ x
 x<- scan("X1.csv")
 x
 
-#§â¸ê®Æ¼g¤J¸ê®ÆÀÉ write.table
+#æŠŠè³‡æ–™å¯«å…¥è³‡æ–™æª” write.table
 write.table(x,"c:/x4_file.csv",row.names=FALSE,
             col.names=FALSE,sep=",")
 
@@ -169,47 +169,47 @@ x
 write.table(x,"c:/x1_file.csv",row.names=FALSE,
             col.names=TRUE,sep=",")
 
-#data()¤º«Ø¸ê®Æ¶°
+#data()å…§å»ºè³‡æ–™é›†
 data(iris)
 iris
 str(iris)
-#¹ïsummaryºK­n²Î­p!!!
+#å°summaryæ‘˜è¦çµ±è¨ˆ!!!
 summary(iris)
-#±Niris¸ê®Æ¦sÀÉ¦bC¼Ñ:
+#å°‡irisè³‡æ–™å­˜æª”åœ¨Cæ§½:
 save(iris,file="c:/iris.Rdaata")
-#¶}±ÒirisÀÉ:
+#é–‹å•Ÿirisæª”:
 load("c:/iris.Rdaata",.GlobalEnv())
-iris  #°õ¦æ!!!!
+iris  #åŸ·è¡Œ!!!!
 
-#²Ä¤T³¹ ¬yµ{±±¨î
+#ç¬¬ä¸‰ç«  æµç¨‹æŽ§åˆ¶
 a <-c(1,2,3)
 x <- a+2
 
-#¥[¤W¬A¸¹()¥Nªíª½±µÅã¥Üµ²ªG
+#åŠ ä¸Šæ‹¬è™Ÿ()ä»£è¡¨ç›´æŽ¥é¡¯ç¤ºçµæžœ
 (x<-a+2)
 
-#{}µ²¦X©R¥O
+#{}çµåˆå‘½ä»¤
 {a <-c(1,2,3);x<-a+2}
 x
 ({a <-c(1,2,3);x<-a+2})
 
-#if-else ±ø¥ó¦¡
+#if-else æ¢ä»¶å¼
 x <- 6
 if(x > 5) y = 2 else y = 4
 y
-#¦h­Ó¹Bºâ¦¡,¥H¤j¬A¸¹{}³ò¦í
+#å¤šå€‹é‹ç®—å¼,ä»¥å¤§æ‹¬è™Ÿ{}åœä½
 x <- 3
 y <- 1
 if(x < 5 && y < 5){y <- 10; z <- 5}
 y
 z
-#ifelse()¨ç¼Æ
+#ifelse()å‡½æ•¸
 x<-20
 y=ifelse(x>5,2,3)
 y
 
 
-#switch()¨ç¼Æ 
+#switch()å‡½æ•¸ 
 x <- 1
 switch(x,5,sum(1:10),rnorm(5))
 
@@ -219,7 +219,7 @@ switch(y, juice = "Apple", meat = "Pork")
 y <- "juice"
 switch(y, juice = "Apple", meat = "Pork")
 
-#for°j°é
+#forè¿´åœˆ
 x <- 0
 for(i in 1:5) x <- x+i
 x
@@ -230,23 +230,23 @@ for(i in 1:5) {x <- x+i; y<- i^2}
 x
 y
 
-#while°j°é
+#whileè¿´åœˆ
 sum <- 0
 i <- 1
 while(i <= 10) {sum <- sum+i; i <- i+1}
 sum
 
-#repeat°j°é
+#repeatè¿´åœˆ
 sum <- 0
 i <- 1
 repeat{
   sum<- sum + i
   i<- i+1
-  if(i>10) break  #¸õ¥X°j°é
+  if(i>10) break  #è·³å‡ºè¿´åœˆ
 }
 sum
 
-# %% -> ¨D¾l¼Æ(¨D°¸¼Æ), %/% -> °Ó¼Æ
+# %% -> æ±‚é¤˜æ•¸(æ±‚å¶æ•¸), %/% -> å•†æ•¸
 sum <- 0
 for(i in 1:50){
   if(i%%2 == 0) next 
@@ -254,23 +254,23 @@ for(i in 1:50){
 }
 sum
 
-#apply ¦C¥[Á` or Äæ¥[Á`
+#apply åˆ—åŠ ç¸½ or æ¬„åŠ ç¸½
 x <- array(1:24, dim = c(4,6))
 x
-apply(x, 1, sum)  #¥H°}¦Cªº¨C¤@¦C°µ¥[Á`
-apply(x, 2, sum)  #¥H°}¦Cªº¨C¤@Äæ°µ¥[Á`
+apply(x, 1, sum)  #ä»¥é™£åˆ—çš„æ¯ä¸€åˆ—åšåŠ ç¸½
+apply(x, 2, sum)  #ä»¥é™£åˆ—çš„æ¯ä¸€æ¬„åšåŠ ç¸½
 
-#function (¦Û­q¨ç¼Æ) myfun
+#function (è‡ªè¨‚å‡½æ•¸) myfun
 myfun <- function(x) {y <- x+2; return(y)}
 myfun(1)
 myfun(100)
-myfun() #¿ù»~ªº
+myfun() #éŒ¯èª¤çš„
 
 myfun <- function(x=1) {y <- x+2; return(y)}
 myfun(50)
 myfun()
 
-# <<- §ïÅÜ¨ç¼Æ¥~­±ªº­È (¤Ö¥Î¸û¨Î!!)
+# <<- æ”¹è®Šå‡½æ•¸å¤–é¢çš„å€¼ (å°‘ç”¨è¼ƒä½³!!)
 x <- 1
 myfun <- function(x) {x <- 2; print(x)}
 myfun(x)
@@ -280,7 +280,7 @@ myfun <- function(x) {x <<- 2; print(x)}
 myfun(x)
 x
 
-#fuctorial¶¥­¼
+#fuctorialéšŽä¹˜
 factorial <- function(x=1){
   y <- 1
   for(i in 1:x) y <- y * i
@@ -291,24 +291,24 @@ factorial(10)
 
 
 
-#²Ä¥|³¹ Ã¸¹Ï¥\¯à
+#ç¬¬å››ç«  ç¹ªåœ–åŠŸèƒ½
 demo(graphics)
 demo(image)
 
-#°ª¶¥Ã¸¹Ï
+#é«˜éšŽç¹ªåœ–
 y <- sin(1:20)
 plot(y,type = "l",main="Sin Plot",xlab = "X",ylab = "Y")
 
-#§C¶¥Ã¸¹Ï
-title(sub = "¹Ï4-2")
-points(5,0.5) #points¦b²{¦³ªº¹Ï§Î¤W¥[¤@­ÓÂI
+#ä½ŽéšŽç¹ªåœ–
+title(sub = "åœ–4-2")
+points(5,0.5) #pointsåœ¨ç¾æœ‰çš„åœ–å½¢ä¸ŠåŠ ä¸€å€‹é»ž
 
-#¤¬°Ê¦¡Ã¸¹Ï
+#äº’å‹•å¼ç¹ªåœ–
 plot(2,2)
 pts <- locator(n=3)
 pts
 
-#identify «ö·Æ¹«¥ªÁä¬ùÂI¿ï¶ê°é¤º
+#identify æŒ‰æ»‘é¼ å·¦éµç´„é»žé¸åœ“åœˆå…§
 x <- c(1,3,5)
 y <- c(5,3,5)
 plot(x,y)
