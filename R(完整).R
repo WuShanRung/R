@@ -88,8 +88,8 @@ x_dataframe[3,2]  #求第3列第2欄的值
 x_dataframe[4,]   #求第4列的值
 x_dataframe[2]    #求第2欄的值
 x_dataframe$age   #求所有age的值
-edit(x_dataframe) #???????????????
-x_dataframe
+edit(x_dataframe) #提供與Excel介面類似的編輯器,
+x_dataframe       #來建立或修改資料框架的值
 
 #當更改資料編輯器裡的數值後,如何更新資料?
 x_dataframe <- edit(x_dataframe)
